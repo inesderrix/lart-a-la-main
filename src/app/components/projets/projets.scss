@@ -1,0 +1,395 @@
+.section {
+  padding: 100px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--fg);
+  margin-bottom: 40px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 56px;
+}
+
+.filter {
+  padding: 9px 22px;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+
+  &:hover {
+    border-color: var(--fg);
+    color: var(--fg);
+  }
+
+  &--active {
+    background: var(--fg);
+    color: var(--cream);
+    border-color: var(--fg);
+  }
+
+  &--active:hover {
+    background: var(--fg);
+    color: var(--cream);
+    border-color: var(--fg);
+  }
+}
+
+// Desktop : masonry 3 colonnes
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  app-projet-card {
+    width: 100%;
+  }
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+// ─── Modal ───────────────────────────────────────────────
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px;
+}
+
+.modal-content {
+  background: var(--card);
+  border-radius: 14px;
+  width: min(1100px, 92vw);
+  max-height: 90vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.modal-image-section {
+  flex: 1.1;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.modal-image-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.modal-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 0;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.modal-info-section {
+  flex: 1;
+  padding: 32px 28px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(0, 0, 0, 0.45);
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s var(--ease);
+  z-index: 10;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 10px 18px;
+  border-radius: 25px;
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.carousel-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+
+  &:hover:not(:disabled) {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  &:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+}
+
+.carousel-counter {
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 500;
+  min-width: 48px;
+  text-align: center;
+}
+
+.modal-title {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--fg);
+  margin: 0 0 4px;
+}
+
+.modal-category {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 16px;
+}
+
+.modal-description {
+  color: var(--fg);
+  line-height: 1.65;
+  font-size: 0.93rem;
+  margin: 0 0 12px;
+}
+
+.modal-materials {
+  font-size: 0.84rem;
+  color: var(--muted);
+  font-style: italic;
+  margin: 0;
+
+  strong {
+    font-style: normal;
+    color: var(--fg);
+  }
+}
+
+.modal-story {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.story-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--fg);
+  margin: 0 0 10px;
+}
+
+.story-text {
+  color: var(--fg);
+  line-height: 1.7;
+  font-size: 0.92rem;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+// ─── Responsive ──────────────────────────────────────────
+
+@media (max-width: 1024px) {
+  .masonry {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .masonry {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .modal-content {
+    width: 100vw;
+    height: 92dvh;
+    max-height: 92dvh;
+    border-radius: 18px 18px 0 0;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .modal-body {
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    // scroll unique sur tout le contenu
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modal-image-section {
+    width: 100%;
+    flex: none;
+    // hauteur fixe indispensable pour que position:absolute fonctionne
+    height: 280px;
+    flex-shrink: 0;
+  }
+
+  .modal-image-container {
+    position: absolute;
+    inset: 0;
+  }
+
+  .modal-image {
+    object-position: center;
+  }
+
+  .modal-info-section {
+    flex: none;
+    width: 100%;
+    padding: 20px 18px 48px;
+    overflow: visible;
+    height: auto;
+  }
+
+  .modal-close {
+    background: rgba(0, 0, 0, 0.55);
+    top: 12px;
+    right: 12px;
+  }
+
+  .modal-title {
+    font-size: 1.1rem;
+  }
+
+  .carousel-controls {
+    gap: 10px;
+    padding: 8px 12px;
+  }
+
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+}
+
+.load-more {
+  display: none;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.load-more-btn {
+  border: 1px solid var(--border);
+  background: transparent;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--fg);
+  padding: 12px 32px;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+
+  &:hover {
+    background: var(--fg);
+    color: var(--cream);
+    border-color: var(--fg);
+  }
+}
+
+.load-more-count {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .load-more {
+    display: flex;
+  }
+}

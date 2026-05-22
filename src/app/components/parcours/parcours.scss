@@ -1,0 +1,282 @@
+.section-title {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--fg);
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  border-radius: 2px;
+}
+
+.parcours-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.parcours-section {
+  margin-bottom: 100px;
+}
+
+.parcours-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s var(--ease);
+}
+
+.section-header.education {
+  border-color: var(--accent);
+}
+
+.section-header.experience {
+  border-color: var(--primary);
+}
+
+.section-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+}
+
+
+.section-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.section-label {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--fg);
+  margin: 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.journey-card {
+  position: relative;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 28px;
+  overflow: hidden;
+  transition: all 0.4s var(--ease);
+  border: 1px solid var(--border);
+  min-height: 180px;
+}
+
+.journey-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.education-card:hover {
+  border-color: var(--accent);
+}
+
+.experience-card:hover {
+  border-color: var(--primary);
+}
+
+.card-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+}
+
+.decoration-circle {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.education-card .decoration-circle {
+  background: var(--accent);
+}
+
+.experience-card .decoration-circle {
+  background: var(--primary);
+}
+
+.decoration-line {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 60px;
+  height: 2px;
+  opacity: 0.15;
+}
+
+.education-card .decoration-line {
+  background: var(--accent);
+  transform: rotate(-45deg);
+}
+
+.experience-card .decoration-line {
+  background: var(--primary);
+  transform: rotate(-45deg);
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.card-date {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.education-card .card-date {
+  background: rgba(255, 107, 107, 0.15);
+  color: var(--primary);
+}
+
+.experience-card .card-date {
+  background: rgba(183, 113, 76, 0.15);
+  color: var(--primary);
+}
+
+.card-title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--fg);
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.card-place {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.card-place svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.card-number {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 700;
+  opacity: 0.05;
+  line-height: 1;
+}
+
+.education-card .card-number {
+  color: var(--accent);
+}
+
+.experience-card .card-number {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 60px;
+  }
+  
+  .section-title::after {
+    width: 40px;
+  }
+  
+  .parcours-section {
+    margin-bottom: 60px;
+  }
+  
+  .section-header {
+    margin-bottom: 30px;
+    padding: 16px 0;
+  }
+  
+  .section-icon {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .section-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .section-label {
+    font-size: 1.4rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .journey-card {
+    padding: 24px;
+    min-height: 160px;
+  }
+  
+  .card-decoration {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .decoration-circle {
+    width: 70px;
+    height: 70px;
+    top: -30px;
+    right: -30px;
+  }
+  
+  .decoration-line {
+    width: 40px;
+    right: 15px;
+  }
+}

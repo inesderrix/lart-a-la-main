@@ -1,0 +1,38 @@
+<!-- Card avec photo simple -->
+@if (project.image) {
+  <div class="card" (click)="onImageClick()">
+    <div class="card-image-container">
+      <img 
+        [src]="'https://res.cloudinary.com/dftcexmdx/image/upload/q_auto/f_auto/v1779264366/' + project.image" 
+        [alt]="project.title" 
+        class="card-image"
+      />
+    </div>
+    <div class="card-content">
+      <div class="card-header">
+        <h3 class="card-title">{{ project.title }}</h3>
+      <span class="category-chip" [ngClass]="chipClass">{{ project.category }}</span>
+      </div>
+      <p class="card-description">{{ project.description }}</p>
+      <div class="card-materials">
+        <small>{{ project.materials }}</small>
+      </div>
+    </div>
+  </div>
+}
+
+<!-- Card placeholder -->
+@if (!project.image && !project.images) {
+  <article class="card card--placeholder">
+    <div class="ph-top">
+      <span class="ph-icon">📷</span>
+      <span class="ph-label">Photo à venir</span>
+    </div>
+    <div class="ph-body">
+      <p class="cat cat--dark">{{ project.category }}</p>
+      <h3 class="name name--dark">{{ project.title }}</h3>
+      <p class="desc desc--dark">{{ project.description }}</p>
+      <p class="mat mat--dark"><strong>Matériaux :</strong> {{ project.materials }}</p>
+    </div>
+  </article>
+}

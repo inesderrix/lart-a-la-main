@@ -1,0 +1,178 @@
+/* ── Image card ── */
+.card {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  background: var(--card);
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s var(--ease);
+}
+
+.card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.card-title {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.category-chip {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  &.chip--couture {
+    background: #f2d6dc;
+    color: #a04060;
+  }
+
+  &.chip--crochet {
+    background: #e4dcf5;
+    color: #6b4fa8;
+  }
+
+  &.chip--decoration {
+    background: #f2e0d4;
+    color: #9b5535;
+  }
+
+  &.chip--fleurs {
+    background: #d8edda;
+    color: #3d7a44;
+  }
+
+  &.chip--maquillage {
+    background: #f2d6db;
+    color: #8a2a3e;
+  }
+
+  &.chip--coiffure {
+    background: #f0e8cc;
+    color: #8a6618;
+  }
+}
+
+.card-description {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+  color: var(--fg);
+  flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-materials {
+  margin-top: auto;
+}
+
+.card-materials small {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-style: italic;
+  display: block;
+  line-height: 1.3;
+}
+
+.desc {
+  font-size: 0.82rem;
+  color: rgba(245, 240, 234, 0.75);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.mat {
+  font-size: 0.73rem;
+  font-style: italic;
+  color: rgba(245, 240, 234, 0.5);
+}
+.mat strong {
+  font-style: normal;
+  color: rgba(245, 240, 234, 0.7);
+}
+
+/* ── Placeholder card ── */
+.card--placeholder {
+  border: 2px dashed var(--border);
+  background: var(--card);
+}
+
+.ph-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 20px 20px;
+  gap: 10px;
+}
+
+.ph-icon {
+  font-size: 1.75rem;
+  opacity: 0.35;
+}
+
+.ph-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ph-body { padding: 0 20px 24px; }
+
+.cat--dark  { color: var(--muted); }
+.name--dark { color: var(--fg); font-size: 1rem; }
+.desc--dark { color: var(--muted); }
+.mat--dark  { color: var(--muted); opacity: 0.8; }

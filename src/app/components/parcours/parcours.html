@@ -1,0 +1,87 @@
+<section id="parcours" class="section">
+  <div class="container">
+    <h2 class="section-title">Mon Parcours</h2>
+    
+    <div class="parcours-container">
+      <!-- Formation Cards -->
+      <div class="parcours-section">
+        <div class="section-header education">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <h3 class="section-label">Formation</h3>
+        </div>
+        
+        <div class="cards-grid">
+          @for (item of educationItems; track item.id) {
+            <div class="journey-card education-card">
+              <div class="card-decoration">
+                <div class="decoration-circle"></div>
+                <div class="decoration-line"></div>
+              </div>
+              <div class="card-content">
+                <div class="card-date">{{ item.date }}</div>
+                <h4 class="card-title">{{ item.role }}</h4>
+                @if (item.place) {
+                  <div class="card-place">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    {{ item.place }}
+                  </div>
+                }
+              </div>
+              <div class="card-number">
+                {{ $index + 1 }}
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+      
+      <!-- Experience Cards -->
+      <div class="parcours-section">
+        <div class="section-header experience">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
+          <h3 class="section-label">Expérience</h3>
+        </div>
+        
+        <div class="cards-grid">
+          @for (item of experienceItems; track item.id) {
+            <div class="journey-card experience-card">
+              <div class="card-decoration">
+                <div class="decoration-circle"></div>
+                <div class="decoration-line"></div>
+              </div>
+              <div class="card-content">
+                <div class="card-date">{{ item.date }}</div>
+                <h4 class="card-title">{{ item.role }}</h4>
+                @if (item.place) {
+                  <div class="card-place">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    {{ item.place }}
+                  </div>
+                }
+              </div>
+              <div class="card-number">
+                {{ $index + 1 }}
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

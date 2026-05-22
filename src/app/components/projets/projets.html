@@ -1,0 +1,105 @@
+  <section id="projets" class="section">
+    <div class="container">
+      <h2 class="section-title">Mes Projets</h2>
+      
+      <div class="filters">
+        @for (category of categories; track category) {
+          <button 
+            class="filter" 
+            [class.filter--active]="selectedCategory === category"
+            (click)="selectCategory(category)"
+          >
+            {{ category }}
+          </button>
+        }
+      </div>
+      
+    <div class="masonry">
+      @for (project of visibleProjects; track project.id) {
+      <app-projet-card [project]="project" (openModal)="openModal($event)"></app-projet-card>
+      }
+    </div>
+    
+    @if (hasMore) {
+    <div class="load-more">
+      <button class="load-more-btn" (click)="loadMore()">
+        Voir plus <span class="load-more-count">({{ filteredProjects.length - mobileVisible }} restants)</span>
+      </button>
+    </div>
+    }
+    </div>
+    
+    @if (isModalOpen && selectedProject) {
+    <div class="modal-overlay" (click)="closeModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <button class="modal-close" (click)="closeModal()" aria-label="Fermer">
+          <span>&times;</span>
+        </button>
+        
+        <div class="modal-body">
+          <!-- Left side: Image -->
+          <div class="modal-image-section">
+            <div class="modal-image-container">
+              @if (selectedProject.images && selectedProject.images.length > 0) {
+                @for (image of selectedProject.images; track image; let i = $index) {
+                  <img 
+                    [src]="'https://res.cloudinary.com/dftcexmdx/image/upload/q_auto/f_auto/v1779264366/' + image" 
+                    [alt]="'Photo ' + selectedProject.title" 
+                    class="modal-image"
+                    [class.hidden]="i !== currentImageIndex"
+                  />
+                }
+              } @else {
+                <img 
+                  [src]="'https://res.cloudinary.com/dftcexmdx/image/upload/q_auto/f_auto/v1779264366/' + selectedProject.image" 
+                  [alt]="'Photo ' + selectedProject.title" 
+                  class="modal-image"
+                />
+              }
+              
+              @if (selectedProject.images && selectedProject.images.length > 1) {
+                <div class="carousel-controls">
+                  <button 
+                    class="carousel-btn carousel-btn--prev" 
+                    (click)="prevImage()"
+                    [disabled]="currentImageIndex === 0"
+                    aria-label="Image précédente"
+                  >
+                    <span>&#10094;</span>
+                  </button>
+                  
+                  <div class="carousel-counter">
+                    <span>{{ currentImageIndex + 1 }} / {{ selectedProject.images.length }}</span>
+                  </div>
+                  
+                  <button 
+                    class="carousel-btn carousel-btn--next" 
+                    (click)="nextImage()"
+                    [disabled]="currentImageIndex === selectedProject.images.length - 1"
+                    aria-label="Image suivante"
+                  >
+                    <span>&#10095;</span>
+                  </button>
+                </div>
+              }
+            </div>
+          </div>
+          
+          <!-- Right side: Description -->
+          <div class="modal-info-section">
+            <h3 class="modal-title">{{ selectedProject.title }}</h3>
+            <p class="modal-category">{{ selectedProject.category }}</p>
+            <p class="modal-description">{{ selectedProject.description }}</p>
+            <p class="modal-materials"><strong>Matériaux :</strong> {{ selectedProject.materials }}</p>
+            @if (selectedProject.story) {
+              <div class="modal-story">
+                <h4 class="story-title">Histoire du projet</h4>
+                <p class="story-text">{{ selectedProject.story }}</p>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  </section>
