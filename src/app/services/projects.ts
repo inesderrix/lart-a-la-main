@@ -76,6 +76,18 @@ export const PROJECTS: Project[] = [
     story: `Ce sac a été réalisé avec un crochet n°10 et du fil t-shirt kaki. Contrairement au fil coton ou au fil chenille — qui donnent des pièces très souples — le fil t-shirt produit un résultat bien plus rigide et structuré. Pour un sac, cette rigidité est un vrai avantage : le sac tient debout, garde sa forme et résiste à l'usure quotidienne. C'est ce qui m'a convaincue que ce type de fil est particulièrement adapté aux accessoires de ce genre.`,
   },
   {
+    id: 'citrouille',
+    title: 'Citrouille sculptée pour Halloween',
+    category: 'Décoration',
+    image: '/assets/citrouille-halloween.jpeg',
+    images: [
+      '/assets/citrouille-halloween.jpeg',
+    ],
+    description: 'Citrouille évidée et sculptée à la main, illuminée de l\'intérieur par une bougie LED.',
+    materials: 'Citrouille naturelle, bougie LED',
+    story: `Pour Halloween, nous avons voulu décorer la maison avec des citrouilles faites maison. Après avoir évidé la citrouille, j'ai sculpté un motif directement dans la chair à l'aide d'outils de cuisine. Une bougie LED placée à l'intérieur crée un effet lumineux qui met en valeur le motif découpé une fois la nuit tombée.`,
+  },
+  {
     id: 'top-degrade-bleu',
     title: 'Top d\'été en dégradé bleu-violet',
     category: 'Crochet',
@@ -100,18 +112,6 @@ export const PROJECTS: Project[] = [
     description: 'Top d\'été crocheté en granny squares et pentagones, avec laçage tressé tricolore dans le dos.',
     materials: 'Fil coton/bambou (1 pelote rose, 1 blanche, 1 marron), crochet n°4',
     story: `Ce top est construit à partir de granny squares et de pentagones (à cinq côtés) assemblés avec un crochet n°4. La taille est formée d'une rangée de cinq carrés, tandis que la poitrine est composée de trois pentagones par côté qui se rejoignent au centre, créant un galbe naturel par la forme des pièces elles-mêmes. Le laçage dans le dos est une tresse réalisée avec les trois couleurs de fils entrelacées, ce qui lui donne un aspect artisanal et soigné.`,
-  },
-  {
-    id: 'citrouille',
-    title: 'Citrouille sculptée pour Halloween',
-    category: 'Décoration',
-    image: '/assets/citrouille-halloween.jpeg',
-    images: [
-      '/assets/citrouille-halloween.jpeg',
-    ],
-    description: 'Citrouille évidée et sculptée à la main, illuminée de l\'intérieur par une bougie LED.',
-    materials: 'Citrouille naturelle, bougie LED',
-    story: `Pour Halloween, nous avons voulu décorer la maison avec des citrouilles faites maison. Après avoir évidé la citrouille, j'ai sculpté un motif directement dans la chair à l'aide d'outils de cuisine. Une bougie LED placée à l'intérieur crée un effet lumineux qui met en valeur le motif découpé une fois la nuit tombée.`,
   },
   {
     id: 'top-vert-premier',
