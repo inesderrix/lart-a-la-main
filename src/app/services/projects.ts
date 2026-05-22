@@ -150,9 +150,9 @@ export const PROJECTS: Project[] = [
     id: 'alice-carte-2024',
     title: 'Alice au Pays des Merveilles — carte dans la tête',
     category: 'Maquillage FX',
-    image: '/assets/alice-carte-2024-2.jpeg',
+    image: '/alice-carte-2024-2.jpeg',
     images: [
-      '/assets/alice-carte-2024-2.jpeg',
+      '/alice-carte-2024-2.jpeg',
     ],
     description: 'Maquillage Halloween 2024 : illusion d\'une carte de la Reine de Cœur enfoncée dans le crâne.',
     materials: 'Carte à jouer, faux sang, sang coagulé, latex liquide',
