@@ -52,18 +52,6 @@ export const PROJECTS: Project[] = [
     story: `J'ai maquillé ma sœur et ma cousine pour un shooting dans une ambiance tamisée. Pour ma sœur, j'ai réalisé une plaie qui prend la moitié du visage et forme un demi-cœur — un motif volontairement symbolique. Pour ma cousine, j'ai opté pour quelque chose de plus discret : une simple égratignure au niveau de la pommette. Les photos ont été prises dans une lumière douce et sombre pour renforcer l'atmosphère.`,
   },
   {
-    id: 'maquillage-ca-clown',
-    title: 'Maquillage Ça — clown d\'horreur',
-    category: 'Maquillage FX',
-    image: '/assets/maquillage-ca-clown.jpeg',
-    images: [
-      '/assets/maquillage-ca-clown.jpeg',
-    ],
-    description: 'Maquillage inspiré du clown Ça, réalisé sur la moitié d\'un visage avec cicatrice en latex.',
-    materials: 'Latex liquide, papier mouchoir, peinture pour visage, faux sang, sang coagulé',
-    story: `Réalisé pour Halloween 2025 sur une amie. L'idée était de recréer l'esthétique du clown Ça sur une seule moitié du visage, pour un effet de contraste saisissant. Pour la cicatrice centrale, j'ai appliqué du latex sur du papier mouchoir afin d'accélérer le séchage et d'améliorer la tenue. Je ne suis pas entièrement satisfaite du résultat : le sang coagulé utilisé n'était pas de bonne qualité et n'a pas rendu comme prévu. Une expérience qui m'a donné envie de tester de meilleurs produits à l'avenir.`,
-  },
-  {
     id: 'main-ensanglantee',
     title: 'Main ensanglantée — test latex et papier',
     category: 'Maquillage FX',
@@ -176,6 +164,18 @@ export const PROJECTS: Project[] = [
     description: 'Bouteilles de champagne recyclées, peintes et décorées de paillettes, strass et dentelle.',
     materials: 'Bouteilles de champagne recyclées, peinture, strass, paillettes, dentelle',
     story: `À l'origine créées pour décorer l'anniversaire des 16 ans d'une amie, ces bouteilles ont eu tellement de succès auprès des invités que j'en ai réalisé d'autres dans différents coloris. Le principe reste le même : peindre la partie inférieure dans une couleur, la partie supérieure dans une autre, et marquer la délimitation avec un liseré de strass ou de dentelle. Les paillettes ajoutées sur le goulot apportent une touche festive. Chaque bouteille devient ainsi un objet décoratif unique.`,
+  },
+  {
+    id: 'maquillage-ca-clown',
+    title: 'Maquillage Ça — clown d\'horreur',
+    category: 'Maquillage FX',
+    image: '/assets/maquillage-ca-clown.jpeg',
+    images: [
+      '/assets/maquillage-ca-clown.jpeg',
+    ],
+    description: 'Maquillage inspiré du clown Ça, réalisé sur la moitié d\'un visage avec cicatrice en latex.',
+    materials: 'Latex liquide, papier mouchoir, peinture pour visage, faux sang, sang coagulé',
+    story: `Réalisé pour Halloween 2025 sur une amie. L'idée était de recréer l'esthétique du clown Ça sur une seule moitié du visage, pour un effet de contraste saisissant. Pour la cicatrice centrale, j'ai appliqué du latex sur du papier mouchoir afin d'accélérer le séchage et d'améliorer la tenue. Je ne suis pas entièrement satisfaite du résultat : le sang coagulé utilisé n'était pas de bonne qualité et n'a pas rendu comme prévu. Une expérience qui m'a donné envie de tester de meilleurs produits à l'avenir.`,
   },
   {
     id: 'tresse-chignon',
