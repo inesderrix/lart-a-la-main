@@ -128,6 +128,7 @@ export const PROJECTS: Project[] = [
     images: [
       '/assets/roses-lumineuses-led.jpeg',
       '/assets/roses-ruban-satin-detail.jpeg',
+      '/assers/roses-lumineuses-boite-jour',
     ],
     description: 'Boîte de 8 roses en ruban satin rouge pailleté, illuminées par une guirlande LED.',
     materials: 'Ruban satin rouge, guirlande LED, boîte, mousse florale, paillettes',
@@ -181,6 +182,8 @@ export const PROJECTS: Project[] = [
     images: [
       '/assets/bouteilles-collection.jpeg',
       '/assets/bouteille-verte-rose.jpeg',
+      'assets/bouteilles-louna-rose',
+      'assets/bouteilles-louna-blanc',
     ],
     description: 'Bouteilles de champagne recyclées, peintes et décorées de paillettes, strass et dentelle.',
     materials: 'Bouteilles de champagne recyclées, peinture, strass, paillettes, dentelle',
@@ -246,5 +249,31 @@ export const PROJECTS: Project[] = [
     description: 'Maquillage FX sur le dos de la main : peau lacérée laissant apparaître les os des doigts simulés en cotons-tiges.',
     materials: 'Latex liquide, cotons-tiges, faux sang, sang coagulé, fard gras',
     story: `Pour Halloween 2021, j'ai réalisé ce maquillage sur le dos de ma propre main. Les "os" des doigts sont simulés avec des cotons-tiges positionnés et recouverts de latex pour les intégrer à la peau. Des couches de latex ont ensuite été posées autour pour créer l'effet de chair déchirée, finalisées avec du faux sang et du sang coagulé pour le rendu réaliste. Un effet simple à réaliser mais très efficace visuellement.`,
+  },
+  {
+    id: 'fleurs-chenille',
+    title: 'Fleurs en fil chenille',
+    category: 'Fleurs',
+    image: '/assets/fleurs-chenille-bouquet-1.jpeg',
+    images: [
+      '/assets/fleurs-chenille-bouquet-1.jpeg',
+      '/assets/fleurs-chenille-bouquet-2.jpeg',
+    ],
+    description: 'Bouquet de fleurs décoratives fabriquées à la main en fil chenille, avec tiges en fil de fer et finitions pastel.',
+    materials: 'Fil chenille, pistils, fil de fer, ruban floral, colle chaude, pastels secs',
+    story: `Ces fleurs sont entièrement fabriquées à la main à partir de fil chenille. Pour chaque fleur, j'ai façonné les pétales en torsadant le fil, puis je les ai fixés autour d'un pistil central à la colle chaude. Les tiges sont en fil de fer recouvert de ruban floral (le scotch vert qu'on utilise en art floral) pour un rendu plus naturel et soigné. Pour donner du relief et de la profondeur aux pétales, j'ai utilisé des pastels secs appliqués à sec — une technique qui permet de créer des dégradés subtils et de faire ressortir la texture du fil chenille. Le résultat est un bouquet doux, coloré et entièrement personnalisable.`,
+  },
+  {
+    id: 'top-papillon',
+    title: 'Top papillon — upcycling jean noir',
+    category: 'Couture',
+    image: '/assets/top-papillon-cote.jpeg',
+    images: [
+      '/assets/top-papillon-cote.jpeg',
+      '/assets/top-papillon-front.jpeg',
+    ],
+    description: 'Top bustier en forme de papillon, entièrement réalisé à partir d\'un jean noir recyclé.',
+    materials: 'Jean noir recyclé',
+    story: `Ce top est né d'un vieux jean noir que je ne portais plus. Plutôt que de le jeter, j'ai décidé de le transformer entièrement. J'ai découpé quatre ailes dans le tissu, que j'ai assemblées deux par deux — chaque paire formant une aile du papillon. Pour créer le motif nervuré caractéristique des ailes, j'ai superposé deux épaisseurs de tissu cousues ensemble, puis découpé la couche supérieure pour faire apparaître les découpes en relief. Le corps du papillon relie les deux paires d'ailes au centre et structure l'ensemble. C'est un projet d'upcycling que j'aime particulièrement car il transforme quelque chose de banal en une pièce vraiment unique.`,
   },
 ];
