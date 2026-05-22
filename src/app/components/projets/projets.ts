@@ -58,11 +58,13 @@ export class Projets {
     this.selectedProject = project;
     this.isModalOpen = true;
     this.currentImageIndex = 0;
+    document.body.style.overflow = 'hidden';
   }
 
   closeModal(): void {
     this.isModalOpen = false;
     this.selectedProject = null;
+    document.body.style.overflow = '';
   }
 
   prevImage(): void {

@@ -86,6 +86,28 @@
   justify-content: center;
   z-index: 9999;
   padding: 16px;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+}
+
+@media (max-width: 640px) {
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+    // couvre bien derrière la barre du bas sur iOS/Android
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .modal-content {
+    width: 100vw;
+    height: 92dvh;
+    max-height: 92dvh;
+    border-radius: 18px 18px 0 0;
+    flex-direction: column;
+    overflow: hidden;
+    // remonte le contenu au dessus de la barre système
+    margin-bottom: env(safe-area-inset-bottom);
+  }
 }
 
 .modal-content {
