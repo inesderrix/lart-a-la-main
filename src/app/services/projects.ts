@@ -124,7 +124,7 @@ export const PROJECTS: Project[] = [
     id: 'roses-lumineuses',
     title: 'Roses lumineuses en ruban satin',
     category: 'Fleurs',
-    image: '/assets/roses-lumineuses-led.jpeg',
+    image: '/roses-lumineuses-boite-jour',
     images: [
       '/assets/roses-lumineuses-led.jpeg',
       '/assets/roses-ruban-satin-detail.jpeg',
@@ -181,7 +181,7 @@ export const PROJECTS: Project[] = [
     image: '/assets/bouteilles-collection.jpeg',
     images: [
       '/assets/bouteilles-collection.jpeg',
-      '/assets/bouteille-verte-rose.jpeg',
+      '/​b_gen_fill,​c_pad,​h_500,​w_500/​assets/​bouteille-verte-rose.jpg',
       '/bouteilles-louna-rose',
       '/bouteilles-louna-blanc',
     ],
@@ -254,10 +254,11 @@ export const PROJECTS: Project[] = [
     id: 'fleurs-chenille',
     title: 'Fleurs en fil chenille',
     category: 'Fleurs',
-    image: '/fleurs-chenille-bouquet-1.jpeg',
+    image: '/fleurs-chenille-bouquet-2.jpeg',
     images: [
       '/fleurs-chenille-bouquet-1.jpeg',
       '/fleurs-chenille-bouquet-2.jpeg',
+      '/fleurs-chenille-detail.jpeg',
     ],
     description: 'Bouquet de fleurs décoratives fabriquées à la main en fil chenille, avec tiges en fil de fer et finitions pastel.',
     materials: 'Fil chenille, pistils, fil de fer, ruban floral, colle chaude, pastels secs',
